@@ -1,0 +1,351 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheBoysSMP | Minecraft Survival</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d09;
+    color: white;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101912;
+    border-bottom: 1px solid #263c2b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #62e879;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #62e879;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+      linear-gradient(rgba(3,12,5,.72), rgba(3,12,5,.9)),
+      url("https://images.unsplash.com/photo-1607513746994-51f730a44832?w=1600")
+      center/cover;
+}
+
+.tag {
+    color: #70ed85;
+    border: 1px solid #438b50;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #64e77a;
+}
+
+.hero p {
+    color: #ccc;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #55d96b;
+    color: #061008;
+    padding: 15px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #83f394;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.server-box {
+    background: #111d14;
+    border: 1px solid #34563b;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.server-box h3 {
+    color: #69e77d;
+    margin-bottom: 22px;
+}
+
+.server-info {
+    background: #080f0a;
+    padding: 17px;
+    border-radius: 7px;
+    margin: 12px 0;
+    color: #eee;
+    overflow-wrap: anywhere;
+}
+
+.server-info small {
+    display: block;
+    color: #8baf91;
+    margin-bottom: 8px;
+}
+
+.copy-btn {
+    margin-top: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #111b13;
+    border: 1px solid #273b2b;
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #65df79;
+}
+
+.card .emoji {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #6be780;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.rules {
+    max-width: 650px;
+    margin: auto;
+    text-align: left;
+}
+
+.rules p {
+    padding: 16px;
+    background: #111b13;
+    margin: 10px 0;
+    border-radius: 7px;
+    color: #ddd;
+}
+
+footer {
+    background: #101912;
+    text-align: center;
+    padding: 30px 15px;
+    color: #888;
+    border-top: 1px solid #263c2b;
+    line-height: 1.8;
+}
+
+footer span {
+    color: #66e77b;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚔ THEBOYSSMP</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#join">Join</a>
+        <a href="#rules">Rules</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="tag">MINECRAFT BEDROCK SURVIVAL</div>
+    <h1>WELCOME TO <span>THEBOYSSMP</span></h1>
+    <p>
+        A world of adventures, friendships and epic survival.
+        Build your empire, explore the world and make your own story.
+    </p>
+    <a href="#join" class="btn">JOIN THE SERVER</a>
+</div>
+
+<section id="about">
+    <h2 class="section-title">ABOUT THE SMP</h2>
+    <p class="section-desc">Your adventure starts here.</p>
+
+    <div class="grid">
+        <div class="card">
+            <div class="emoji">🌍</div>
+            <h3>Survival World</h3>
+            <p>Explore, build and survive in our Minecraft world.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">⚔️</div>
+            <h3>Epic Adventures</h3>
+            <p>Experience exciting challenges and adventures.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🤝</div>
+            <h3>Community</h3>
+            <p>Play together, make friends and create memories.</p>
+        </div>
+    </div>
+</section>
+
+<section id="join">
+    <h2 class="section-title">JOIN THE ADVENTURE</h2>
+    <p class="section-desc">Ready to enter TheBoysSMP?</p>
+
+    <div class="server-box">
+        <h3>🟢 SERVER INFORMATION</h3>
+
+        <div class="server-info">
+            <small>SERVER IP</small>
+            <strong id="ip">Theboyssmp-xFsY.aternos.me</strong>
+        </div>
+
+        <div class="server-info">
+            <small>PORT</small>
+            <strong id="port">19132</strong>
+        </div>
+
+        <button class="btn copy-btn" onclick="copyServer()">
+            COPY SERVER ADDRESS
+        </button>
+        <p id="copy-message" style="margin-top:15px;color:#69e77d;"></p>
+        <p style="margin-top:20px;color:#999;font-size:13px;">
+            Minecraft Bedrock Edition
+        </p>
+    </div>
+</section>
+
+<section id="rules">
+    <h2 class="section-title">SERVER RULES</h2>
+    <p class="section-desc">Respect everyone and keep the SMP fun.</p>
+
+    <div class="rules">
+        <p>01. Respect all players.</p>
+        <p>02. No hacking or cheating.</p>
+        <p>03. No stealing from other players.</p>
+        <p>04. No griefing or destroying builds.</p>
+        <p>05. Don't spam or abuse chat.</p>
+        <p>06. Have fun and enjoy the SMP!</p>
+    </div>
+</section>
+
+<footer>
+    <h3>⚔ THEBOYSSMP</h3>
+    <p>Survive. Explore. Conquer.</p>
+    <p>© 2026 TheBoysSMP. All rights reserved.</p>
+</footer>
+
+<script>
+function copyServer() {
+    const address = "Theboyssmp-xFsY.aternos.me:19132";
+
+    navigator.clipboard.writeText(address)
+    .then(() => {
+        document.getElementById("copy-message").textContent =
+            "✓ Server address copied!";
+    })
+    .catch(() => {
+        document.getElementById("copy-message").textContent =
+            "Please copy the IP and port manually.";
+    });
+}
+</script>
+
+</body>
+</html>
